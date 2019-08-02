@@ -12,6 +12,6 @@ version: 1.00
 add_action('wp_enqueue_scripts','calendar_tools_init');
 
 function calendar_tools_init() {
-    wp_enqueue_script( 'testAll', plugins_url( '/js/calendarTools.js', __FILE__ ));
+    wp_enqueue_script( 'getDreamSpellKin', plugins_url( '/js/calendarTools.js', __FILE__ ));
 }
 ?>
