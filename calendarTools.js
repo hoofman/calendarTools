@@ -3,7 +3,7 @@
 
 Calendar Tools For DreamSpell / LongCount (tzolkin / haab)
 
-2019 - Luke~Mackenzie~Muir - 13earth/8sun - luke@sapho.co.uk - 
+2019 - Luke~Mackenzie~Muir - 13earth/8sun - luke@sapho.co.uk -
 
 in lak'ech;
 
@@ -63,6 +63,7 @@ function getToneSeal(kin){
 
   return getColour(colour-1)+' '+getTone(tone-1)+' '+getSeal(seal-1)+' ';
 }
+
 
 
 
