@@ -64,16 +64,19 @@ function getToneSeal(kin){
 }
 
 
+module.exports = {
+  testConsole: function () {
+    console.log('testing all ..')
+    console.log('daysSinceEpoch: ',daysSinceEpoch());
+    console.log('getLongCountKin: ', getLongCountKin());
+    console.log('getToneSeal LongCount Tzolkin: ',getToneSeal(getLongCountKin()));
+    console.log('getDreamSpellKin: ', getDreamSpellKin());
+    console.log('getToneSeal DreamSpell: ',getToneSeal(getDreamSpellKin()));
+    console.log('getLongCountKinHaab: ', getLongCountKinHaab());
+    console.log('getToneSeal LongCount Haab: ', getToneSeal(getLongCountKinHaab()));
+  },
+  testBrowser: function() {
+    return document.write('console.logging tests');
+  }
 
-
-function testAll(){
-  console.log('testing all ..')
-  console.log('daysSinceEpoch: ',daysSinceEpoch());
-  console.log('getLongCountKin: ', getLongCountKin());
-  console.log('getToneSeal LongCount Tzolkin: ',getToneSeal(getLongCountKin()));
-  console.log('getDreamSpellKin: ', getDreamSpellKin());
-  console.log('getToneSeal DreamSpell: ',getToneSeal(getDreamSpellKin()));
-  console.log('getLongCountKinHaab: ', getLongCountKinHaab());
-  console.log('getToneSeal LongCount Haab: ', getToneSeal(getLongCountKinHaab()));
-  return document.write('console.logging tests');
 }
