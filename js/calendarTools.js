@@ -51,7 +51,19 @@ function getColour(colour){
 
 }
 
-function getToneSeal(kin){
+function getToneSealImg(kin){
+
+  var tone = kin % 13;
+  if(tone===0){tone=13}
+  var seal = kin % 20;
+  if(seal==0){seal=20};
+  var colour = seal % 4;
+  if(colour===0){colour=4}
+
+  return '<img src='+'"'+'glyphs/tone'+tone+'.gif'+'"'+'></img>'+'<br>'+'<img src='+'"'+'glyphs/glyph'+seal+'.png'+'"'+'></img>'
+}
+
+function getToneSealTxt(kin){
 
   var tone = kin % 13;
   if(tone===0){tone=13}
@@ -63,6 +75,21 @@ function getToneSeal(kin){
   return getColour(colour-1)+' '+getTone(tone-1)+' '+getSeal(seal-1)+' ';
 }
 
+
+
+
+
+function showGlyph(foo){
+
+  return '<img src='+'"'+'glyphs/glyph'+foo+'.png'+'"'+'></img>'
+
+}
+
+function showTone(foo){
+
+  return '<img src='+'"'+'glyphs/tone'+foo+'.gif'+'"'+'></img>'
+
+}
 
 module.exports = {
   testConsole: function () {
@@ -76,7 +103,7 @@ module.exports = {
     console.log('getToneSeal LongCount Haab: ', getToneSeal(getLongCountKinHaab()));
   },
   testBrowser: function() {
-    return document.write('console.logging tests');
+    // bla
   }
 
 }
